@@ -25,3 +25,23 @@ and I have found it to be an excellent source for understanding the topic.
 Note: This code can be easily extended to generate longer, higher entropy passwords, if 
 a list of words has the correct indexing. Further development may include robustness for 
 all types of indicies. Additionally reducing the API calls to 1 per run may be possible.
+
+
+## Setup Instructions
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/kevweiss/diceware.git
+    cd diceware
+    ```
+
+2. Create and activate a virtual environment:
+    ```bash
+    python3 -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    ```
+
+3. Install dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
