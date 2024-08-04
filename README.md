@@ -45,3 +45,8 @@ all types of indicies. Additionally reducing the API calls to 1 per run may be p
     ```bash
     pip install -r requirements.txt
     ```
+
+4. Run program:
+   ```bash
+    python3 diceware_2.0.py
+    ```
