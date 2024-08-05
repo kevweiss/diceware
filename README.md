@@ -24,24 +24,15 @@ all types of indicies. Additionally reducing the API calls to 1 per run may be p
 
 ## Setup Instructions
 
-1. Clone the repository:
+1. Download diceware_install.sh
+
+
+2. Chagne permissions on diceware_install.sh:
     ```bash
-    git clone https://github.com/kevweiss/diceware.git
-    cd diceware
+    chmod +x diceware_install.sh
     ```
 
-2. Create and activate a virtual environment:
+3. Run the install:
     ```bash
-    python3 -m venv venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-    ```
-
-3. Install dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4. Run program:
-   ```bash
-    python3 diceware_2.0.py
+    ./diceware_install.sh
     ```
