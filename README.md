@@ -27,7 +27,7 @@ all types of indicies. Additionally reducing the API calls to 1 per run may be p
 1. Download diceware_install.sh
 
 
-2. Chagne permissions on diceware_install.sh:
+2. Change permissions on diceware_install.sh:
     ```bash
     chmod +x diceware_install.sh
     ```
