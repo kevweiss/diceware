@@ -54,3 +54,6 @@ source "$SHELL_CONFIG"
 
 echo "Setup completed successfully. You can now run the script using 'diceware_gen'."
 
+echo "NOTE: If 'diceware_gen' is not running, please run 'source $SHELL_CONFIG' to apply the alias in your current shell session."
+
+
