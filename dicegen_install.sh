@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Directory where the Python script is located
-SCRIPT_DIR="$HOME/HW/dice_env/scripts"
+SCRIPT_DIR="$HOME/HW/diceware"
 SCRIPT_NAME="diceware_2.0.py"
 ALIAS_NAME="diceware_gen"
 
