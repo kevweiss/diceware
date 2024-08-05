@@ -14,9 +14,16 @@ call has been simplified. 'get_word_list()' is replaced and simplified with 'gen
 
 
 # Constants 
+'''
 WORDLIST_FILES = {
     '4': 'wordlist4.txt',
     '5': 'wordlist5.txt'
+}
+'''
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))  # Get the script's directory
+WORDLIST_FILES = {
+    '4': os.path.join(SCRIPT_DIR, 'wordlist4.txt'),
+    '5': os.path.join(SCRIPT_DIR, 'wordlist5.txt')
 }
 QRNG_API_URL = "http://qrng.ethz.ch/api/randint"
 OUTPUT_FILE = 'password.out'
