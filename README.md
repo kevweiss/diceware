@@ -35,7 +35,7 @@ all types of indicies. Additionally reducing the API calls to 1 per run may be p
 
 
 NOTE: If diceware_gen does not automatically run as a command line alias, run
-    ```bash
+    ```
     source ~/.bashrc
     ```
 
