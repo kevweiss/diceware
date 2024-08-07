@@ -24,15 +24,11 @@ all types of indicies. Additionally reducing the API calls to 1 per run may be p
 
 ## Setup Instructions
 
-1. Download diceware_install.sh
+1. Open a Linux enviornment and navigate to the folder where you wish to install the program. 
 
 
-2. Change permissions on diceware_install.sh:
+2. Run diceware_install.sh with:
     ```bash
-    chmod +x diceware_install.sh
+    wget -qO- https://raw.githubusercontent.com/kevweiss/diceware/main/diceware_install.sh | bash
     ```
-
-3. Run the install:
-    ```bash
-    ./diceware_install.sh
-    ```
+   This will install the command line tool 'diceware_gen' and it's dependancies. 
