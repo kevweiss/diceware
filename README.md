@@ -1,5 +1,5 @@
 # diceware
-Generate and export diceware passwords to LastPass
+Generate and export diceware passwords to LastPass (Linux/Mac OS only)
 
 
 This program generates a random password using the files wordlist4.txt and wordlist5.txt.
