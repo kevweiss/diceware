@@ -20,6 +20,24 @@ then
     exit 1
 fi
 
+# Install lastpass-cli
+if ! command -v lpass &> /dev/null
+then
+    echo "Installing lastpass-cli..."
+    if command -v apt-get &> /dev/null; then
+        sudo apt-get update
+        sudo apt-get install lastpass-cli -y
+    elif command -v yum &> /dev/null; then
+        sudo yum install epel-release -y
+        sudo yum install lastpass-cli -y
+    elif command -v brew &> /dev/null; then
+        brew install lastpass-cli
+    else
+        echo "Could not find a supported package manager. Please install lastpass-cli manually."
+        exit 1
+    fi
+fi
+
 # Create a virtual environment
 python3 -m venv venv
 
@@ -55,5 +73,6 @@ source "$SHELL_CONFIG"
 echo "Setup completed successfully. You can now run the script using 'diceware_gen'."
 
 echo "NOTE: If 'diceware_gen' is not running, please run 'source $SHELL_CONFIG' to apply the alias in your current shell session."
+
 
 
