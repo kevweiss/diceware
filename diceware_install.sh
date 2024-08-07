@@ -16,8 +16,41 @@ cd diceware || { echo "Failed to enter the diceware directory. Exiting."; exit 1
 # Check if Python 3 is installed
 if ! command -v python3 &> /dev/null
 then
-    echo "Python 3 is not installed. Please install Python 3 and try again."
-    exit 1
+    echo "Python 3 is not installed. Installing Python 3..."
+    if command -v apt-get &> /dev/null; then
+        sudo apt-get update
+        sudo apt-get install python3 -y
+    elif command -v yum &> /dev/null; then
+        sudo yum install python3 -y
+    elif command -v brew &> /dev/null; then
+        brew install python@3
+    else
+        echo "Could not find a supported package manager. Please install Python 3 manually."
+        exit 1
+    fi
+fi
+
+# Check if pip3 is installed
+if ! command -v pip3 &> /dev/null
+then
+    echo "pip3 is not installed. Installing pip3..."
+    if command -v apt-get &> /dev/null; then
+        sudo apt-get install python3-pip -y
+    elif command -v yum &> /dev/null; then
+        sudo yum install python3-pip -y
+    elif command -v brew &> /dev/null; then
+        brew install pip3
+    else
+        echo "Could not find a supported package manager. Please install pip3 manually."
+        exit 1
+    fi
+fi
+
+# Ensure pip is installed via ensurepip if necessary
+if ! python3 -m ensurepip &> /dev/null
+then
+    echo "Installing ensurepip..."
+    python3 -m ensurepip --upgrade
 fi
 
 # Install lastpass-cli
@@ -73,6 +106,3 @@ source "$SHELL_CONFIG"
 echo "Setup completed successfully. You can now run the script using 'diceware_gen'."
 
 echo "NOTE: If 'diceware_gen' is not running, please run 'source $SHELL_CONFIG' to apply the alias in your current shell session."
-
-
-
