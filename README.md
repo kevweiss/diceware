@@ -32,3 +32,10 @@ all types of indicies. Additionally reducing the API calls to 1 per run may be p
     wget -qO- https://raw.githubusercontent.com/kevweiss/diceware/main/diceware_install.sh | bash
     ```
    This will install the command line tool 'diceware_gen' and it's dependancies. 
+
+
+NOTE: If diceware_gen does not automatically run as a command line alias, run
+    ```bash
+    source ~/.bashrc
+    ```
+
