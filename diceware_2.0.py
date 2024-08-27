@@ -89,6 +89,7 @@ def generate_password(roll_num, word_dict):
         index = ''.join(map(str, index_raw))
         word = find_word(index, word_dict)
         pw_lst.append(word)
+        pw_lst.append('\n')
     return ''.join(pw_lst)
 
 
