@@ -147,10 +147,10 @@ def main():
     word_dict = read_words(file_path)
     password = generate_password(roll_num, word_dict)
 
-    if input("Would you like to save this password to your local directory? (Yes/No)\n").lower().strip() == 'yes':
+    if input("Would you like to save this password to your local directory? (Yes/No)\n").lower().strip() in ['yes', 'y']:
         save_password(OUTPUT_FILE, password)
     
-    if input("Would you like to export this password to LastPass? (Yes/No)\n").lower().strip() == 'yes':
+    if input("Would you like to export this password to LastPass? (Yes/No)\n").lower().strip() in ['yes', 'y']:
         lastpass_export(password)
     
     calculate_entropy(roll_num)
