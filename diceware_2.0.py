@@ -140,6 +140,7 @@ def calculate_entropy(roll_num):
     # Calculates and prints the entropy of the generated password.
     charset_size = 1296 if roll_num == '4' else 7776
     length = int(roll_num)
+    # Number of rolls * log2(number of words in each wordlist) 
     entropy = int(length * math.log2(charset_size))
     print(f"The final entropy of the password is about: {entropy} bits")
 
