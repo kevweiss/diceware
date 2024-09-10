@@ -7,7 +7,8 @@ import sys
 '''
 This is the second rendition of diceware.py that cleans up code by removing global variables
 and adhering to some Python best practices. Error handling has been improved, and the API 
-call has been simplified. 'get_word_list()' is replaced and simplified with 'generate_password()'
+call has been simplified and reduced to a single call per password. 'get_word_list()' is 
+replaced and simplified with 'generate_password()'
 
 Author: Kevin Weiss
 '''
