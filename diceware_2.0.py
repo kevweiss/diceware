@@ -78,6 +78,7 @@ def get_random_integers(size):
 
 def find_word(idx, word_dict):
     # Finds the word associated with the given index in the word dictionary.
+    # If no value at idx return empty string
     return word_dict.get(idx, '')
 
 
