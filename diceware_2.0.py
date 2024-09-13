@@ -30,16 +30,22 @@ OUTPUT_FILE = 'password.out'
 
 def get_roll_num():
     # Prompts the user to select the number of words for the password.
-    print('\n\n****************** WARNING *******************') 
-    print('It is recommended you choose 5 words to ensure \nmaximum entropy of the generated password.')
-    print('**********************************************\n')
-    
+    print('\n' + '=' * 50)
+    print('                 IMPORTANT NOTICE                 ')
+    print('=' * 50)
+    print('For enhanced security, it is strongly recommended')
+    print('that you select 5 words for maximum password')
+    print('entropy. A 4-word password may offer less security.')
+    print('=' * 50 + '\n')
+
     while True:
-        roll_num = input("Please select the number of words you desire: \n (4) \n (5) \n")
+        roll_num = input("Please select the number of words for your password (4 or 5): \n> ")
+        
         if roll_num in WORDLIST_FILES:
             return roll_num
         else:
-            print("Invalid choice. Please select either '4' or '5'.")
+            print("\n[Error] Invalid selection. Please choose either '4' or '5'.\n")
+
 
 
 
