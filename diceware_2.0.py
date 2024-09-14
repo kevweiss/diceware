@@ -35,7 +35,7 @@ def get_roll_num():
     print('=' * 50)
     print('For enhanced security, it is strongly recommended')
     print('that you select 5 words for maximum password')
-    print('entropy. A 4-word password may offer less security.')
+    print('entropy. A 4-word password offers less security.')
     print('=' * 50 + '\n')
 
     while True:
