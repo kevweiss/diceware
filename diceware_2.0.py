@@ -48,7 +48,6 @@ def get_roll_num():
 
 
 
-
 def read_words(file_path):
     # Reads the wordlist file and returns a dictionary mapping indices to words.
     word_dict = {}
@@ -88,6 +87,7 @@ def find_word(idx, word_dict):
     return word_dict.get(idx, '')
     
 
+
 def generate_password(roll_num, word_dict):
     # Get all required random integers in one API call
     total_rolls = int(roll_num) ** 2  # Total rolls needed
@@ -104,6 +104,7 @@ def generate_password(roll_num, word_dict):
         pw_lst.append('\n')
 
     return ''.join(pw_lst)
+
 
 
 def save_password(output_file, password):
