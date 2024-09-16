@@ -87,7 +87,7 @@ def find_word(idx, word_dict):
     # If no value at idx return empty string
     return word_dict.get(idx, '')
 
-
+'''
 def generate_password(roll_num, word_dict):
     # Determine how many rolls are required per word based on the roll_num
     rolls_per_word = 5 if roll_num == '5' else 4
@@ -100,6 +100,27 @@ def generate_password(roll_num, word_dict):
     for i in range(int(roll_num)):
         # Extract the appropriate number of rolls for each word
         index_raw = all_indices[i * rolls_per_word:(i + 1) * rolls_per_word]
+        index = ''.join(map(str, index_raw))
+        word = find_word(index, word_dict)
+        pw_lst.append(word.capitalize())
+        pw_lst.append('\n')
+
+    return ''.join(pw_lst)
+   ''' 
+
+def generate_password(roll_num, word_dict):
+    # Determine how many rolls are required per word based on the roll_num
+    # rolls_per_word = 5 if roll_num == '5' else 4
+    total_rolls = int(roll_num) ** 2  # Total rolls needed
+
+    # Get all required random integers in one API call
+    all_indices = get_random_integers(total_rolls)
+    roll_num = int(roll_num)
+
+    pw_lst = []
+    for i in range(int(roll_num)):
+        # Extract the appropriate number of rolls for each word
+        index_raw = all_indices[i * roll_num:(i + 1) * roll_num]
         index = ''.join(map(str, index_raw))
         word = find_word(index, word_dict)
         pw_lst.append(word.capitalize())
