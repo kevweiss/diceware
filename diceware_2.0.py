@@ -47,7 +47,6 @@ def get_roll_num():
             print("\n[Error] Invalid selection. Please choose either '4' or '5'.\n")
 
 
-
 def read_words(file_path):
     # Reads the wordlist file and returns a dictionary mapping indices to words.
     word_dict = {}
@@ -67,7 +66,6 @@ def read_words(file_path):
     return word_dict
 
 
-
 def get_random_integers(size):
     # Get quantum random integers from the QRNG API.
     params = {'min': 1, 'max': 6, 'size': size}
@@ -80,13 +78,11 @@ def get_random_integers(size):
         sys.exit(1)
 
 
-
 def find_word(idx, word_dict):
     # Finds the word associated with the given index in the word dictionary.
     # If no value at idx return empty string
     return word_dict.get(idx, '')
     
-
 
 def generate_password(roll_num, word_dict):
     # Get all required random integers in one API call
@@ -106,14 +102,12 @@ def generate_password(roll_num, word_dict):
     return ''.join(pw_lst)
 
 
-
 def save_password(output_file, password):
     # Saves the generated password to a file.
     with open(output_file, 'w') as file:
         file.write(password)
     os.chmod(output_file, 0o600)
     print(f"Password saved to {output_file}.")
-
 
 
 def lastpass_export(password):
@@ -140,7 +134,6 @@ def lastpass_export(password):
         print("Password successfully saved to LastPass.")
 
 
-
 def calculate_entropy(roll_num):
     # Calculates and prints the entropy of the generated password.
     charset_size = 1296 if roll_num == '4' else 7776
@@ -148,7 +141,6 @@ def calculate_entropy(roll_num):
     # Number of rolls * log2(number of words in each wordlist) 
     entropy = int(length * math.log2(charset_size))
     print(f"The final entropy of the password is about: {entropy} bits")
-
 
 
 
