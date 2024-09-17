@@ -34,7 +34,7 @@ OUTPUT_FILE = 'password.out'
 ############################### FUNCTION DEFINTIONS ###############################
 
 def get_roll_num():
-    # Prompts the user to select the number of words for the password.
+    # Prompts user to select the number of words for the password.
     print('\n' + '=' * 50)
     print('                 IMPORTANT NOTICE                 ')
     print('=' * 50)
